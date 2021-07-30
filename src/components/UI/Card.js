@@ -19,7 +19,7 @@ const StyledCard = styled.div`
   padding:18px;
   background-color:#fff;
   border-radius:7px;
-  margin:0 auto;
+  margin:10px auto;
 
   @media (min-width:768px) {
     width:50%;

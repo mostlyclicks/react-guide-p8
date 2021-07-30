@@ -5,9 +5,12 @@ import styled from 'styled-components'
 const User = () => {
   return (
     <Card>
+      
       <StyledUser>
         <p>Bill (Age 31 years old)</p>
+
       </StyledUser>
+
     </Card>
   )
 }
