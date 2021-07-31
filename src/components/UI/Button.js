@@ -3,6 +3,8 @@ import React from 'react'
 const Button = () => {
 
   const buttonHandler = (props) => {
+
+    
     console.log('button clicked in button component')
     
   }

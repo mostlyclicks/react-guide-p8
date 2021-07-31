@@ -5,19 +5,27 @@ import Button from '../UI/Button'
 
 
 const NewUser = () => {
+
+  const addUserHandler = (event) => {
+    event.preventDefault();
+
+
+  }
+
   return (
     <div>
       <Card>
-        <UserForm>
+        <UserForm onSubmit={addUserHandler}>
           <div className="form-control">
-            <label>Username:</label>  
-            <input type="text" value="" />
+            <label htmlFor="username">Username:</label>  
+            <input id="username" type="text" value="" />
           </div>
           <div className="form-control">
-            <label>Age</label>
-            <input type="text" value="" />
+            <label htmlFor="age">Age (Years):</label>  
+            <input id="age" type="number" value="" />
           </div>
-          <Button>Submit</Button>
+          <button type="submit">Add User</button>
+          
         </UserForm>
       </Card>
     </div>
@@ -28,8 +36,17 @@ const NewUser = () => {
 export default NewUser
 
 const UserForm = styled.form`
-  input[text] {
-    width:auto;
+  display:flex;
+  flex-wrap:wrap;
+
+
+  input {
+    
+  }
+
+  label {
+    display:block;
+    text-align:left;
   }
 
 `
