@@ -13,6 +13,8 @@ const NewUser = () => {
     event.preventDefault();
     console.log('button clicked')
     console.log(enteredUsername, enteredAge)
+    setEnteredUsername('')
+    setEnteredAge('')
     //props funtion with args?
   }
 
