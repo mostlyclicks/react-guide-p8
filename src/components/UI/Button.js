@@ -1,18 +1,13 @@
 import React from 'react'
 
-const Button = () => {
-
-  const buttonHandler = (props) => {
-
-    
-    console.log('button clicked in button component')
-    
-  }
-
+const Button = (props) => {
 
   return (
-    <button onClick={buttonHandler}>
-      Click Me!
+    <button 
+      onClick={props.onClick}
+      type={props.type || 'button'}
+    >
+      {props.children}
     </button>
   )
 }
