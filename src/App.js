@@ -1,9 +1,15 @@
 import React from 'react'
-import User from './components/User/User'
 import NewUser from './components/NewUser/NewUser'
+import UserList from './components/User/UserList'
 import './App.css';
 
 function App() {
+
+  const users = [
+    {name:'bill', age: 32},
+    {name: 'carlos', age: 55},
+    {name: 'miyu', age: 5}
+  ]
 
 
 
@@ -12,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <NewUser />
-      <User />
+      <UserList userList={users}/>
     </div>
   );
 }

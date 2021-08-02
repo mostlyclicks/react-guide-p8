@@ -38,24 +38,6 @@ const NewUser = () => {
     //props.agefunction(age)
   }
 
-  // const checkName = (name) => {
-  //   if (!name) {
-  //     return 'please enter name'
-  //   } else {
-  //     return name
-  //   }
-  // }
-
-  // const checkAge = (age) => {
-  //   if (age < 1) {
-  //     console.log('need age')
-  //     return 'please enter an age'
-  //   } else {
-  //     console.log('age ok')
-  //     return age
-  //   }
-  // }
-
   return (
     <div>
       <Card>

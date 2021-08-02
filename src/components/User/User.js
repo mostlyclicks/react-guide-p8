@@ -2,13 +2,12 @@ import React from 'react'
 import Card from '../UI/Card'
 import styled from 'styled-components'
 
-const User = () => {
+const User = (props) => {
   return (
     <Card>
       
       <StyledUser>
-        <p>Bill (Age 31 years old)</p>
-
+        <p>{props.userItem.name} - {props.userItem.age}</p>
       </StyledUser>
 
     </Card>
