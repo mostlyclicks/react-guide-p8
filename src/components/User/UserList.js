@@ -6,13 +6,13 @@ const UserList = (props) => {
   const users = props.userList
 
   return (
-    <div>
+    <ul>
       {users.map((user) => {
         return (
-          <User userItem={user} />
+          <li key={Math.random().toString()}><User userItem={user} /></li>
         )
       })}
-    </div>
+    </ul>
   )
 }
 

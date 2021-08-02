@@ -4,7 +4,7 @@ import Card from '../UI/Card'
 import Button from '../UI/Button'
 
 
-const NewUser = () => {
+const NewUser = (props) => {
 
   const [enteredUsername, setEnteredUsername] = useState('')
   const [enteredAge, setEnteredAge] = useState('')
@@ -21,9 +21,14 @@ const NewUser = () => {
       return
     }
     console.log(enteredUsername, enteredAge)
+    //props.somefunctionthatsetsUserStatewithargs
+    const newUserData = {name: enteredUsername, age: enteredAge}
+    props.onAddUser(newUserData)
+
+    //then reset the state
     setEnteredUsername('')
     setEnteredAge('')
-    //props funtion with args?
+    
   }
 
   const usernameHandler = (event) => {
