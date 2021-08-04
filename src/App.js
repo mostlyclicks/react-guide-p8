@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import NewUser from './components/NewUser/NewUser'
 import UserList from './components/User/UserList'
+import ErrorModal from './components/UI/ErrorModal'
 import './App.css';
 
 
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <ErrorModal />
       <NewUser onAddUser={addUser} />
       <UserList userList={users}/>
     </div>
