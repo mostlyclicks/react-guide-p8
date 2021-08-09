@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Card from '../UI/Card'
 import Button from '../UI/Button'
+import ErrorModal from '../UI/ErrorModal'
 
 
 const NewUser = (props) => {
@@ -45,6 +46,7 @@ const NewUser = (props) => {
 
   return (
     <div>
+     <ErrorModal title="an error occured" message="something"/>
       <Card>
         <UserForm onSubmit={addUserHandler}>
           <div className="form-control">
