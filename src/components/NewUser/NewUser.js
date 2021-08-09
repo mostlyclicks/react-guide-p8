@@ -9,17 +9,32 @@ const NewUser = (props) => {
 
   const [enteredUsername, setEnteredUsername] = useState('')
   const [enteredAge, setEnteredAge] = useState('')
+  const [error, setError] = useState(null)
+  
 
   const addUserHandler = (event) => {
     event.preventDefault();
     console.log('button clicked')
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
       console.log('please try again')
-      return
+      return (
+        setError({
+          title: 'Invalid Input',
+          message: 'please enter a valid name and age'
+        })
+      )
+      
     }
     if (+enteredAge < 1) {
       console.log('not valid age')
-      return
+      return (
+        setError({
+          title: 'Invalid age',
+          message: 'Age must be > 0'
+        })
+      ) 
+
+      
     }
     console.log(enteredUsername, enteredAge)
     //props.somefunctionthatsetsUserStatewithargs
@@ -44,9 +59,13 @@ const NewUser = (props) => {
     //props.agefunction(age)
   }
 
+  const handleError = () => {
+    setError(null)
+  }
+
   return (
     <div>
-     <ErrorModal title="an error occured" message="something"/>
+     {error && <ErrorModal title="error title" message="error message" onConfirm={handleError} />}
       <Card>
         <UserForm onSubmit={addUserHandler}>
           <div className="form-control">
